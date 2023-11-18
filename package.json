@@ -1,12 +1,12 @@
 {
   "name": "rifa-gen",
-  "author": "jefersonla",
+  "author": "maatheusgois",
   "version": "0.2.0",
   "private": true,
   "license": "MIT",
   "description": "TypeScript app with parcel bundler.",
   "main": "lib/index.js",
-  "homepage": "https://jefersonla.github.io/rifa-typescript-app/",
+  "homepage": "https://maatheusgois.github.io/rifa-typescript-app/",
   "scripts": {
     "start": "parcel serve index.html --open",
     "build": "cross-env NODE_ENV=production parcel build index.html --public-url .",
@@ -37,12 +37,12 @@
     "svg-to-pdfkit": "0.1.7"
   },
   "devDependencies": {
-    "@types/blob-stream": "0.1.29",
     "@types/lodash": "4.14.136",
-    "@types/node": "12.6.8",
     "@types/pdfkit": "0.10.0",
+    "@types/blob-stream": "0.1.29",
+    "@types/node": "12.6.8",
     "cross-env": "5.2.0",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "2.0.1",
     "parcel-bundler": "1.12.3",
     "typescript": "3.5.3"
   }

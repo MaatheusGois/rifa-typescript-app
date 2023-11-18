@@ -17,7 +17,7 @@ type PDFDocumentType = typeof PDFDocument;
 /**
  * ---------- Constantes -----------
  */
-const TEXTO_GERAR_RIFA = 'Para gerar sua rifa clique no botão abaixo';
+const TEXTO_GERAR_RIFA = '';
 const TEXTO_AGUARDE_GERAR = 'Aguarde enquanto sua rifa está sendo gerada';
 const PREFIXO_TEXTO_PROGRESSO = 'Progresso';
 const TEXTO_INICIO_PROGRESSO = `${PREFIXO_TEXTO_PROGRESSO}: 0%`;
@@ -486,17 +486,17 @@ const criaNovoDocumento = () => {
         size: 'a4',
         layout: 'portrait',
         info: {
-            Author: 'Jeferson Lima',
+            Author: 'Matheus Gois',
             Title: `Rifa gerada por RifaGen - ${obterTituloRifa()}`,
             Creator: 'RifaGen',
-            Producer: 'RifaGen.com',
+            Producer: 'https://maatheusgois.github.io/rifa-typescript-app',
             CreationDate: new Date(),
             ModDate: new Date(),
             Keywords: 'rifa, fichas, sorteio'
         },
         autoFirstPage: false
     });
-    documento.fontSize(10);
+    documento.fontSize(5);
 
     iniciaStreamDocumento();
 };
@@ -536,7 +536,7 @@ const cadastraPagina = (quantidade_paginas: number) => {
 
         documento
             .addPage()
-            .text(`Página ${num_pagina + 1}/${quantidade_paginas}`);
+            .text(`Página ${num_pagina + 1}/${quantidade_paginas}`)
 
         rangeFichasPagina(num_pagina)
             .forEach(adicionaFichaPagina);

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -21,491 +22,551 @@
   <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
-<div class="slds-grid slds-wrap">
-  
-  <!-- HeaderPagina -->
-  <nav class="slds-col slds-size_1-of-1">
-    <div class="slds-page-header">
-      <div class="slds-page-header__row">
+  <div class="slds-grid slds-wrap">
 
-        <!-- TituloPagina -->
-        <div class="slds-page-header__col-title">
-          <div class="slds-media">
-
-            <!-- LogoPagina -->
-            <div class="slds-media__figure">
-              <span class="slds-icon_container slds-icon-standard-opportunity" title="opportunity">
-                <!-- <img alt="RifaGen logo" src="/assets/images/logo.svg" class="slds-icon slds-page-header__icon logo-pagina" aria-hidden="true"> -->
-                <span class="slds-assistive-text">opportunity</span>
-              </span>
-            </div>
-            <!-- ./LogoPagina -->
-
-            <!-- HeaderBodyPagina -->
-            <div class="slds-media__body header-pagina">
-
-              <!-- TituloPagina -->
-              <div class="slds-page-header__name">
-                <div class="slds-page-header__name-title">
-                  <h1 class="slds-page-header__title slds-truncate" title="RifaGen - Gerador de rifas">
-                    Gerador de Rifas em PDF
-                  </h1>
-                </div>
-              </div>
-              <!-- ./TituloPagina -->
-
-              <!-- DescricaoPagina -->
-              <p class="slds-page-header__name-meta">
-                Gere sua rifa em PDF fácil e rápido. Cada página da rifa possuirá max. 5 cartelas. Tamanho da página A4.
-                Obs.: Não é necessário preencher todos os campos.
-              </p>
-              <!-- ./DescricaoPagina -->
-
-            </div>
-            <!-- ./HeaderBodyPagina -->
-
-          </div>
-        </div>
-        <!-- ./TituloPagina -->
-
-        <!-- GitHubLink -->
-        <div class="slds-page-header__col-actions" style="padding-bottom: 0;">
-          <div class="slds-page-header__controls">
-            <div class="slds-page-header__control">
-              <a href="https://github.com/maatheusgois/rifa-typescript-app" class="slds-button slds-button_neutral botao-fork">
-                <img alt="Icone configurações" class="slds-icon slds-icon_small" src="/assets/images/icons/octoicon.svg">
-                <span>GitHub</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- ./GitHubLink -->
-
-      </div>
-    </div>
-  </nav>
-  <!-- ./HeaderPagina -->
-
-  <!-- PrevisualizacaoCartela -->
-  <main class="slds-col slds-size_1-of-1" style="text-align:center;">
-    
-    <!-- TemplateRifa -->
-    <svg id="rifa-template" class="rifa-template-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" version="1.1">
-      <style>
-        .linhas {
-          stroke-width: 0.3px;
-          stroke:#000;
-          stroke-miterlimit: 4;
-          stroke-dasharray: none;
-        }
-
-        .regioes {
-          stroke-width: 0.4px;
-          stroke:#000;
-          fill-opacity: 0;
-          stroke-miterlimit: 4;
-          stroke-dasharray: none;
-        }
-
-        .titulo {
-          font: 8px sans-serif;
-        }
-
-        .numero {
-          font: 11px sans-serif;
-        }
-
-        .dados {
-          font: 5px sans-serif;
-        }
-
-        .header-rifa {
-          font: 3px sans-serif;
-        }
-
-        .premio-destaque {
-          font: 5px sans-serif;
-          font-weight: bold;
-        }
-
-        .campanha-destaque {
-          font: 4px sans-serif;
-          font-weight: bold;
-        }
-
-        .observacoes {
-          font: 4px sans-serif;
-          text-align: center;
-          text-anchor: middle;
-        }
-      </style>
-
-      <!-- RegioesPagina -->
-      <rect width="141.0" height="49.6" x="58.80" y="0.20" class="regioes"></rect>
-      <rect width="58.60" height="49.6" x="0.200" y="0.20" class="regioes"></rect>
-      <rect width="39.60" height="13.0" x="160.2" y="24.8" class="regioes"></rect>
-      <!-- ./RegioesPagina -->
-
-      <!-- Linhas -->
-      <path d="M 30.0,27.85 H 57" class="linhas"></path>
-      <path d="M 19.0,13.85 H 57" class="linhas"></path>
-      <path d="M 12.0,20.85 H 57" class="linhas"></path>
-      <path d="M 2.00,34.85 H 57" class="linhas"></path>
-      <!-- ./Linhas -->
-
-      <!-- NumeroDireita -->
-      <text class="numero" x="161.52042" y="35.249744">
-        Nº
-      </text>
-      <text id="var_num1" style="text-align:center;text-anchor:middle;" class="numero" x="187.28076" y="35.094238">
-        000
-      </text>
-      <!-- ./NumeroDireita -->
-
-      <!-- NumeroEsquerda -->
-      <text style="stroke-width:0.96505564;" class="numero" x="11.387641" y="44.633823" transform="scale(0.96505563,1.0362097)">
-        Nº
-      </text>
-      <text id="var_num2" style="text-anchor:middle;text-align:center;" class="numero" x="35.776043" y="46.098953">
-        000
-      </text>
-      <!-- ./NumeroEsquerda -->
-
-      <!-- TituloRifa -->
-      <text x="1.4765625" y="6.8182006" class="titulo" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6px;line-height:normal;font-family:sans-serif;stroke-width:0.95641512" transform="scale(0.9869257,1.0132475)">
-        Rifa
-      </text>
-      <!-- ./TituloRifa -->
-
-      <!-- DadosRifa -->
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="dados" x="1.4765625" y="13.924484">
-        Nome:
-      </text>
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="dados" x="1.7" y="20.924484" >
-        Tel:
-      </text>
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif;stroke-width:0.99874771" class="dados" x="1.4787749" y="27.94042"  transform="scale(0.99889502,1.0011062)">
-        Endereço:
-      </text>
-      <!-- ./DadosRifa -->
-
-      <!-- TituloRifa -->
-      <text x="62" y="7" class="titulo" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:normal;font-family:sans-serif;font-size:6px">
-        Rifa
-      </text>
-
-      <!-- ./TituloRifa -->
-
-      <!-- HeaderRifa -->
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3px;line-height:normal;font-family:sans-serif;text-align:center;text-anchor:middle" class="header-rifa" x="128.94482" y="3.7924805" id="var_header_linha1">
-        %VAR_HEADER_LINHA1%
-      </text>
-      <text style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4px;line-height:normal;font-family:sans-serif;text-align:center;text-anchor:middle" class="campanha-destaque" x="129.36328" y="8.1745605" id="var_header_linha2">
-        %VAR_HEADER_LINHA2%
-      </text>
-      <!-- ./HeaderRifa -->
-
-      <!-- PremioRifa -->
-      <text style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="premio-destaque" y="16" x="62">
-        Prêmio:
-      </text>
-      <text style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="premio-destaque" y="16" x="84" id="var_premio_linha1">
-        %VAR_PREMIO_LINHA1%
-      </text>
-      <text style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="premio-destaque" y="22" x="84" id="var_premio_linha2">
-        %VAR_PREMIO_LINHA2%
-      </text>
-      <!-- ./PremioRifa -->
-
-      <!-- Data -->
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="dados" y="30" x="62">
-        Data:
-      </text>
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="dados" y="30" x="77" id="var_data_realizacao">
-        %VAR_DATA_REALIZACAO%
-      </text>
-      <!-- ./Data -->
-
-      <!-- Local -->
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="dados" y="36" x="62">
-        Local:
-      </text>
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="dados" y="36" x="77" id="var_local_realizacao">
-        %VAR_LOCAL_REALIZACAO%
-      </text>
-      <!-- ./Local -->
-
-      <!-- Valor -->
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="dados" y="42" x="62">
-        Valor:
-      </text>
-      <text style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif" class="dados" y="42" x="77" id="var_valor_da_rifa">
-        %VAR_VALOR_DA_RIFA%
-      </text>
-      <!-- ./Valor -->
-
-      <!-- ObservacoesRifa -->
-      <text id="var_observacoes" x="128.39648" y="48.056641" class="observacoes" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:normal;font-family:sans-serif;text-align:center;text-anchor:middle">
-        %VAR_OBSERVACOES%
-      </text>
-      <!-- ./ObservacoesRifa -->
-
-    </svg>
-    <!-- ./TemplateRifa -->
-    
-    <div id="app"></div>
-  </main>
-  <!-- ./PrevisualizacaoCartela -->
-
-  <!-- ConfiguraçãoRifa -->
-  <nav class="area-config slds-col slds-size_1-of-1">
-    <article class="slds-card configuracao-area">
-
-      <!-- HeaderConfiguracao -->
-      <div class="slds-card__header slds-grid">
-        <header class="slds-media slds-media_center slds-has-flexi-truncate">
-          
-          <!-- IconeHeader -->
-          <div class="slds-media__figure">
-            <span class="slds-icon_container slds-icon-standard-task" title="account" style="padding: 2px;">
-              <img alt="Icone configurações" class="slds-icon slds-icon_small" src="/assets/images/icons/settings.svg">
-              <span class="slds-assistive-text">account</span>
-            </span>
-          </div>
-          <!-- ./IconeHeader -->
-
-          <!-- TituloHeader -->
-          <div class="slds-media__body">
-            <h2 class="slds-card__header-title">
-              <span class="slds-card__header-link slds-truncate">
-                Configuração
-              </span>
-            </h2>
-          </div>
-          <!-- ./TituloHeader -->
-
-        </header>
-      </div>
-      <!-- ./HeaderConfiguracao -->
-
-      <!-- BodyConfiguracao -->
-      <div class="slds-card__body slds-card__body_inner slds-scrollable area-scroll">
-
-        <!-- FormQuantidadeFichas -->
-        <div class="slds-form-element slds-text-align_center" style="margin-bottom: 15px;">
-
-          <!-- LabelQuantidadeFichas -->
-          <label class="slds-form-element__label slds-m-right_none" for="input-quantidade-fichas">
-            Quantidade de fichas - <b> Total de páginas: <span id="total-paginas-geradas">1</span></b>
-          </label>
-          <!-- ./LabelQuantidadeFichas -->
-
-          <!-- ContainerQuantidadeFichas -->
-          <div class="slds-form-element__control">
-
-            <!-- DecrementarFichasBotao -->
-            <button class="slds-button slds-button_icon slds-button_icon-small slds-input__button_decrement" id="botao-decrementar-fichas" title="Decrementar contador">
-              <img alt="Icone Decremento" class="slds-button__icon" src="/assets/images/icons/ban.svg">
-              <span class="slds-assistive-text">
-                Decrementar numero de fichas
-              </span>
-            </button>
-            <!-- ./DecrementarFichasBotao -->
-
-            <!-- InputQuantidadeFichas -->
-            <input type="number" min="1" max="999" class="slds-input slds-input_counter" id="input-quantidade-fichas" value="1" placeholder="Quantidade de fichas" />
-            <!-- ./InputQuantidadeFichas -->
-
-            <!-- IncrementarFichasBotao -->
-            <button class="slds-button slds-button_icon slds-button_icon-small slds-input__button_increment" id="botao-incrementar-fichas" title="Incrementar contador">
-              <img alt="Icone Incremento" class="slds-button__icon" src="/assets/images/icons/new.svg">
-              <span class="slds-assistive-text">
-                Incrementar numero de fichas
-              </span>
-            </button>
-            <!-- ./IncrementarFichasBotao -->
-
-          </div>
-          <!-- ./ContainerQuantidadeFichas -->
-
-        </div>
-        <!-- ./FormQuantidadeFichas -->
-
-        <!-- FormCabeçalhoLinha1 -->
-        <div class="slds-form-element">
-          <label class="slds-form-element__label" for="input_var_header_linha1"> 
-            Cabeçalho Linha 1
-          </label>
-          <div class="slds-form-element__control">
-            <input type="text" id="input_var_header_linha1" placeholder="Cabeçalho Linha 1" class="slds-input" />
-          </div>
-        </div>
-        <!-- ./FormCabeçalhoLinha1 -->
-
-        <!-- FormCabeçalhoLinha2 -->
-        <div class="slds-form-element">
-          <label class="slds-form-element__label" for="input_var_header_linha2"> 
-            Cabeçalho Linha 2
-          </label>
-          <div class="slds-form-element__control">
-            <input type="text" id="input_var_header_linha2" placeholder="Cabeçalho Linha 2" class="slds-input" />
-          </div>
-        </div>
-        <!-- ./FormCabeçalhoLinha2 -->
-
-        <!-- FormPremioLinha1 -->
-        <div class="slds-form-element">
-          <label class="slds-form-element__label" for="input_var_premio_linha1"> 
-            Prêmio Linha 1
-          </label>
-          <div class="slds-form-element__control">
-            <input type="text" id="input_var_premio_linha1" placeholder="Prêmio Linha 1" class="slds-input" />
-          </div>
-        </div>
-        <!-- ./FormPremioLinha1 -->
-
-        <!-- FormPremioLinha2 -->
-        <div class="slds-form-element">
-          <label class="slds-form-element__label" for="input_var_premio_linha2"> 
-            Prêmio Linha 2
-          </label>
-          <div class="slds-form-element__control">
-            <input type="text" id="input_var_premio_linha2" placeholder="Prêmio Linha 2" class="slds-input" />
-          </div>
-        </div>
-        <!-- ./FormPremioLinha2 -->
-
-        <!-- FormDataRealizacao -->
-        <div class="slds-form-element">
-          <label class="slds-form-element__label" for="input_var_data_realizacao"> 
-            Data Realização
-          </label>
-          <div class="slds-form-element__control">
-            <input type="text" id="input_var_data_realizacao" placeholder="Data Realização" class="slds-input" />
-          </div>
-        </div>
-        <!-- ./FormDataRealizacao -->
-
-        <!-- FormLocalRealizacao -->
-        <div class="slds-form-element">
-          <label class="slds-form-element__label" for="input_var_local_realizacao"> 
-            Local Realização
-          </label>
-          <div class="slds-form-element__control">
-            <input type="text" id="input_var_local_realizacao" placeholder="Local Realização" class="slds-input" />
-          </div>
-        </div>
-        <!-- ./FormLocalRealizacao -->
-
-        <!-- FormValorRealizacao -->
-        <div class="slds-form-element">
-          <label class="slds-form-element__label" for="input_var_valor_da_rifa"> 
-            Valor da Rifa
-          </label>
-          <div class="slds-form-element__control">
-            <input type="text" id="input_var_valor_da_rifa" placeholder="Valor da rifa" class="slds-input" />
-          </div>
-        </div>
-        <!-- ./FormValorRealizacao -->
-
-        <!-- FormObservacoes -->
-        <div class="slds-form-element">
-          <label class="slds-form-element__label" for="input_var_observacoes"> 
-            Observações Gerais
-          </label>
-          <div class="slds-form-element__control">
-            <input type="text" id="input_var_observacoes" placeholder="Observações Gerais" class="slds-input" />
-          </div>
-        </div>
-        <!-- ./FormObservacoes -->
-
-      </div>
-      <!-- ./BodyConfiguracao -->
-
-    </article>
-  </nav>
-  <!-- ./ConfiguraçãoRifa -->
-
-  <!-- Rodape -->
-  <div class="slds-docked-form-footer footer-pagina">
+    <!-- HeaderPagina -->
     <nav class="slds-col slds-size_1-of-1">
+      <div class="slds-page-header">
+        <div class="slds-page-header__row">
 
-      <!-- CardGerador -->
-      <article class="slds-card card-gerar">
-    
-        <!-- ./HeaderGeracao -->
+          <!-- TituloPagina -->
+          <div class="slds-page-header__col-title">
+            <div class="slds-media">
 
-        <!-- Progresso -->
-        <div id="container-progresso" class="progresso-oculto slds-card__body slds-card__body_inner">
-          <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
-            <span class="slds-progress-bar__value" id="barra-progresso" style="width: 0">
-              <span class="slds-assistive-text" id="progresso-text-acessibilidade">Progresso: 0%</span>
-            </span>
+              <!-- LogoPagina -->
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="opportunity">
+                  <!-- <img alt="RifaGen logo" src="/assets/images/logo.svg" class="slds-icon slds-page-header__icon logo-pagina" aria-hidden="true"> -->
+                  <span class="slds-assistive-text">opportunity</span>
+                </span>
+              </div>
+              <!-- ./LogoPagina -->
+
+              <!-- HeaderBodyPagina -->
+              <div class="slds-media__body header-pagina">
+
+                <!-- TituloPagina -->
+                <div class="slds-page-header__name">
+                  <div class="slds-page-header__name-title">
+                    <h1 class="slds-page-header__title slds-truncate" title="RifaGen - Gerador de rifas">
+                      Gerador de Rifas em PDF
+                    </h1>
+                  </div>
+                </div>
+                <!-- ./TituloPagina -->
+
+                <!-- DescricaoPagina -->
+                <p class="slds-page-header__name-meta">
+                  Gere sua rifa em PDF fácil e rápido. Cada página da rifa possuirá max. 5 cartelas. Tamanho da página
+                  A4.
+                  Obs.: Não é necessário preencher todos os campos.
+                </p>
+                <!-- ./DescricaoPagina -->
+
+              </div>
+              <!-- ./HeaderBodyPagina -->
+
+            </div>
           </div>
+          <!-- ./TituloPagina -->
+
+          <!-- GitHubLink -->
+          <div class="slds-page-header__col-actions" style="padding-bottom: 0;">
+            <div class="slds-page-header__controls">
+              <div class="slds-page-header__control">
+                <a href="https://github.com/maatheusgois/rifa-typescript-app"
+                  class="slds-button slds-button_neutral botao-fork">
+                  <img alt="Icone configurações" class="slds-icon slds-icon_small"
+                    src="/assets/images/icons/octoicon.svg">
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ./GitHubLink -->
+
         </div>
-        <!-- ./Progresso -->
-        
-        <!-- BotaoGerar -->
-        <footer style="margin-top: 0; padding: 0;">
-          <button class="slds-button slds-button_brand botao-card" id="botao-gerar-rifa">
-            Clique aqui para gerar sua Rifa!
-          </button>
-        </footer>
-        <!-- ./BotaoGerar -->
+      </div>
+    </nav>
+    <!-- ./HeaderPagina -->
+
+    <!-- PrevisualizacaoCartela -->
+    <main class="slds-col slds-size_1-of-1" style="text-align:center;">
+
+      <!-- TemplateRifa -->
+      <svg id="rifa-template" class="rifa-template-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50"
+        version="1.1">
+        <style>
+          .linhas {
+            stroke-width: 0.3px;
+            stroke: #000;
+            stroke-miterlimit: 4;
+            stroke-dasharray: none;
+          }
+
+          .regioes {
+            stroke-width: 0.4px;
+            stroke: #000;
+            fill-opacity: 0;
+            stroke-miterlimit: 4;
+            stroke-dasharray: none;
+          }
+
+          .titulo {
+            font: 8px sans-serif;
+          }
+
+          .numero {
+            font: 11px sans-serif;
+          }
+
+          .dados {
+            font: 5px sans-serif;
+          }
+
+          .header-rifa {
+            font: 3px sans-serif;
+          }
+
+          .premio-destaque {
+            font: 5px sans-serif;
+            font-weight: bold;
+          }
+
+          .campanha-destaque {
+            font: 4px sans-serif;
+            font-weight: bold;
+          }
+
+          .observacoes {
+            font: 4px sans-serif;
+            text-align: center;
+            text-anchor: middle;
+          }
+        </style>
+
+        <!-- RegioesPagina -->
+        <rect width="141.0" height="49.6" x="58.80" y="0.20" class="regioes"></rect>
+        <rect width="58.60" height="49.6" x="0.200" y="0.20" class="regioes"></rect>
+        <rect width="39.60" height="13.0" x="160.2" y="24.8" class="regioes"></rect>
+        <!-- ./RegioesPagina -->
+
+        <!-- Linhas -->
+        <path d="M 30.0,27.85 H 57" class="linhas"></path>
+        <path d="M 19.0,13.85 H 57" class="linhas"></path>
+        <path d="M 12.0,20.85 H 57" class="linhas"></path>
+        <path d="M 2.00,34.85 H 57" class="linhas"></path>
+        <!-- ./Linhas -->
+
+        <!-- NumeroDireita -->
+        <text class="numero" x="161.52042" y="35.249744">
+          Nº
+        </text>
+        <text id="var_num1" style="text-align:center;text-anchor:middle;" class="numero" x="187.28076" y="35.094238">
+          000
+        </text>
+        <!-- ./NumeroDireita -->
+
+        <!-- NumeroEsquerda -->
+        <text style="stroke-width:0.96505564;" class="numero" x="11.387641" y="44.633823"
+          transform="scale(0.96505563,1.0362097)">
+          Nº
+        </text>
+        <text id="var_num2" style="text-anchor:middle;text-align:center;" class="numero" x="35.776043" y="46.098953">
+          000
+        </text>
+        <!-- ./NumeroEsquerda -->
+
+        <!-- TituloRifa -->
+        <text x="1.4765625" y="8" class="titulo"
+          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6px;line-height:normal;font-family:sans-serif;stroke-width:0.95641512"
+          transform="scale(0.9869257,1.0132475)">
+          Rifa
+        </text>
+        <!-- ./TituloRifa -->
+
+        <!-- DadosRifa -->
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="dados" x="1.4765625" y="13.924484">
+          Nome:
+        </text>
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="dados" x="1.7" y="20.924484">
+          Tel:
+        </text>
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif;stroke-width:0.99874771"
+          class="dados" x="1.4787749" y="27.94042" transform="scale(0.99889502,1.0011062)">
+          Endereço:
+        </text>
+        <!-- ./DadosRifa -->
+
+        <!-- TituloRifa -->
+        <text x="62" y="8" class="titulo"
+          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:normal;font-family:sans-serif;font-size:6px">
+          Rifa
+        </text>
+
+        <!-- ./TituloRifa -->
+
+        <!-- HeaderRifa -->
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3px;line-height:normal;font-family:sans-serif;text-align:center;text-anchor:middle"
+          class="header-rifa" x="128.94482" y="3.7924805" id="var_header_linha1">
+          %VAR_HEADER_LINHA1%
+        </text>
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4px;line-height:normal;font-family:sans-serif;text-align:center;text-anchor:middle"
+          class="campanha-destaque" x="129.36328" y="8.1745605" id="var_header_linha2">
+          %VAR_HEADER_LINHA2%
+        </text>
+        <!-- ./HeaderRifa -->
+
+        <!-- PremioRifa -->
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="premio-destaque" y="16" x="62">
+          Prêmio:
+        </text>
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="premio-destaque" y="16" x="84" id="var_premio_linha1">
+          %VAR_PREMIO_LINHA1%
+        </text>
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="premio-destaque" y="22" x="84" id="var_premio_linha2">
+          %VAR_PREMIO_LINHA2%
+        </text>
+        <!-- ./PremioRifa -->
+
+        <!-- Data -->
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="dados" y="30" x="62">
+          Data:
+        </text>
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="dados" y="30" x="77" id="var_data_realizacao">
+          %VAR_DATA_REALIZACAO%
+        </text>
+        <!-- ./Data -->
+
+        <!-- Local -->
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="dados" y="36" x="62">
+          Local:
+        </text>
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="dados" y="36" x="77" id="var_local_realizacao">
+          %VAR_LOCAL_REALIZACAO%
+        </text>
+        <!-- ./Local -->
+
+        <!-- Valor -->
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="dados" y="42" x="62">
+          Valor:
+        </text>
+        <text
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;line-height:normal;font-family:sans-serif"
+          class="dados" y="42" x="77" id="var_valor_da_rifa">
+          %VAR_VALOR_DA_RIFA%
+        </text>
+        <!-- ./Valor -->
+
+        <!-- ObservacoesRifa -->
+        <text id="var_observacoes" x="128.39648" y="48.056641" class="observacoes"
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:normal;font-family:sans-serif;text-align:center;text-anchor:middle">
+          %VAR_OBSERVACOES%
+        </text>
+        <!-- ./ObservacoesRifa -->
+
+      </svg>
+      <!-- ./TemplateRifa -->
+
+      <div id="app"></div>
+    </main>
+    <!-- ./PrevisualizacaoCartela -->
+
+    <!-- ConfiguraçãoRifa -->
+    <nav class="area-config slds-col slds-size_1-of-1">
+      <article class="slds-card configuracao-area">
+
+        <!-- HeaderConfiguracao -->
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+            <!-- TituloHeader -->
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <span class="slds-card__header-link slds-truncate">
+                  Configurações
+                </span>
+              </h2>
+            </div>
+            <!-- ./TituloHeader -->
+
+          </header>
+        </div>
+        <!-- ./HeaderConfiguracao -->
+
+        <!-- BodyConfiguracao -->
+        <div class="slds-card__body slds-card__body_inner slds-scrollable area-scroll">
+
+
+
+          <!-- FormCabeçalhoLinha1 -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="input_var_header_linha1">
+              Cabeçalho Linha 1
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input_var_header_linha1" placeholder="Cabeçalho Linha 1" class="slds-input" />
+            </div>
+          </div>
+          <!-- ./FormCabeçalhoLinha1 -->
+
+          <!-- FormCabeçalhoLinha2 -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="input_var_header_linha2">
+              Cabeçalho Linha 2
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input_var_header_linha2" placeholder="Cabeçalho Linha 2" class="slds-input" />
+            </div>
+          </div>
+          <!-- ./FormCabeçalhoLinha2 -->
+
+          <!-- FormPremioLinha1 -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="input_var_premio_linha1">
+              Prêmio Linha 1
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input_var_premio_linha1" placeholder="Prêmio Linha 1" class="slds-input" />
+            </div>
+          </div>
+          <!-- ./FormPremioLinha1 -->
+
+          <!-- FormPremioLinha2 -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="input_var_premio_linha2">
+              Prêmio Linha 2
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input_var_premio_linha2" placeholder="Prêmio Linha 2" class="slds-input" />
+            </div>
+          </div>
+          <!-- ./FormPremioLinha2 -->
+
+          <!-- FormDataRealizacao -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="input_var_data_realizacao">
+              Data Realização
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input_var_data_realizacao" placeholder="Data Realização" class="slds-input" />
+            </div>
+          </div>
+          <!-- ./FormDataRealizacao -->
+
+          <!-- FormLocalRealizacao -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="input_var_local_realizacao">
+              Local Realização
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input_var_local_realizacao" placeholder="Local Realização" class="slds-input" />
+            </div>
+          </div>
+          <!-- ./FormLocalRealizacao -->
+
+          <!-- FormValorRealizacao -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="input_var_valor_da_rifa">
+              Valor da Rifa
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input_var_valor_da_rifa" placeholder="Valor da rifa" class="slds-input" />
+            </div>
+          </div>
+          <!-- ./FormValorRealizacao -->
+
+          <!-- FormObservacoes -->
+          <div class="slds-form-element">
+            <label class="slds-form-element__label" for="input_var_observacoes">
+              Observações Gerais
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input_var_observacoes" placeholder="Observações Gerais" class="slds-input" />
+            </div>
+          </div>
+          <!-- ./FormObservacoes -->
+
+          <!-- FormQuantidadeFichas -->
+          <div class="slds-form-element slds-text-align_center" style="margin-top: 30px;margin-bottom: 30px;">
+
+            <!-- LabelQuantidadeFichas -->
+            <label class="slds-form-element__label slds-m-right_none" for="input-quantidade-fichas" style="margin-bottom: 5px;">
+              Quantidade de fichas - <b> Total de páginas: <span id="total-paginas-geradas">1</span></b>
+            </label>
+            <!-- ./LabelQuantidadeFichas -->
+
+            <!-- ContainerQuantidadeFichas -->
+            <div class="slds-form-element__control">
+
+              <!-- DecrementarFichasBotao -->
+              <button class="slds-button slds-button_icon slds-button_icon-small slds-input__button_decrement"
+                id="botao-decrementar-fichas" title="Decrementar contador">
+                <img alt="Icone Decremento" class="slds-button__icon" src="/assets/images/icons/ban.svg">
+                <span class="slds-assistive-text">
+                  Decrementar numero de fichas
+                </span>
+              </button>
+              <!-- ./DecrementarFichasBotao -->
+
+              <!-- InputQuantidadeFichas -->
+              <input type="number" min="1" max="999" class="slds-input slds-input_counter" id="input-quantidade-fichas"
+                value="1" placeholder="Quantidade de fichas" />
+              <!-- ./InputQuantidadeFichas -->
+
+              <!-- IncrementarFichasBotao -->
+              <button class="slds-button slds-button_icon slds-button_icon-small slds-input__button_increment"
+                id="botao-incrementar-fichas" title="Incrementar contador">
+                <img alt="Icone Incremento" class="slds-button__icon" src="/assets/images/icons/new.svg">
+                <span class="slds-assistive-text">
+                  Incrementar numero de fichas
+                </span>
+              </button>
+              <!-- ./IncrementarFichasBotao -->
+
+            </div>
+            <!-- ./ContainerQuantidadeFichas -->
+          </div>
+          <!-- ./FormQuantidadeFichas -->
+
+
+
+        </div>
+        <!-- ./BodyConfiguracao -->
 
       </article>
-      <!-- ./CardGerador -->
-
-      <!-- MadeWithLove -->
-      <div class="slds-col slds-size_1-of-1 made-with-love">
-          Feito com amor <span>&hearts;</span> por <a href="https://github.com/jefersonla">@jefersonla</a> & 
-          adaptado por <a href="https://github.com/maatheusgois">@maatheusgois</a>
-      </div>
-      <!-- MadeWithLove -->
-
     </nav>
-  </div>
-  <!-- ./Rodape -->
+    <!-- ./ConfiguraçãoRifa -->
 
-  <!-- ModalRifaGerada -->
-  <div id="container-modal" style="display: none;">
-    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open animated bounceIn">
-      <div class="slds-modal__container">
-        
-        <!-- HeaderModal -->
-        <header class="slds-modal__header">
-          <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
-            Uhuuu, agora é só baixar ;)
-          </h2>
-        </header>
-        <!-- ./HeaderModal -->
+    <!-- Rodape -->
+    <div class="slds-docked-form-footer footer-pagina">
+      <nav class="slds-col slds-size_1-of-1">
 
-        <!-- BodyModal -->
-        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-          <a rel="noopener noreferrer" target="_blank" id="botao-baixar-rifa" style="text-align: center; display: block;">
-            <img alt="Icone Download PDF" src="/assets/images/icons/pdf.svg" style="width:20%;">
-            <span style="display: block;"> Clique para baixar sua rifa! </span>
-          </a>
+        <!-- CardGerador -->
+        <article class="slds-card card-gerar">
+
+          <!-- HeaderGeracao -->
+        <div class="slds-grid slds-einstein-header slds-card__header header-gerar" style="margin-bottom: 0;">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            
+            <!-- HeaderGeracaoConteudo -->
+            <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                  <!-- LoadingImage -->
+                  <img alt="Icone Loading" class="img-oculto" id="icone-loading"  src="/assets/images/icons/loading.svg"/>
+                  <!-- ./LoadingImage -->
+
+                  <!-- ContainerMensagem -->
+                  <span id="header-card-gerar-rifa" class="slds-text-heading_small"></span>
+                <!-- </h2> -->
+            </div>
+            <!-- ./HeaderGeracaoConteudo -->
+
+            <!-- IconeEinstein -->
+            <!-- <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div> -->
+            <!-- ./IconeEinstein -->
+
+          </header>
         </div>
-        <!-- BodyModal -->
+        <!-- ./HeaderGeracao -->
 
-        <!-- FooterModal -->
-        <footer class="slds-modal__footer">
-          <button class="slds-button slds-button_neutral" id="botao-fechar-modal">Fechar</button>
-        </footer>
-        <!-- ./FooterModal -->
+          <!-- Progresso -->
+          <div id="container-progresso" class="progresso-oculto slds-card__body slds-card__body_inner">
+            <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
+              <span class="slds-progress-bar__value" id="barra-progresso" style="width: 0">
+                <span class="slds-assistive-text" id="progresso-text-acessibilidade">Progresso: 0%</span>
+              </span>
+            </div>
+          </div>
+          <!-- ./Progresso -->
 
-      </div>
-    </section>
-    <div class="slds-backdrop slds-backdrop_open"></div>
+          <!-- BotaoGerar -->
+          <footer style="margin-top: 0; padding: 0;">
+            <button class="slds-button slds-button_brand botao-card" id="botao-gerar-rifa">
+              Clique aqui para gerar sua Rifa!
+            </button>
+          </footer>
+          <!-- ./BotaoGerar -->
+
+        </article>
+        <!-- ./CardGerador -->
+
+        <!-- MadeWithLove -->
+        <div class="slds-col slds-size_1-of-1 made-with-love">
+          Feito com amor <span>&hearts;</span> por <a href="https://github.com/jefersonla">@jefersonla</a> &
+          adaptado por <a href="https://github.com/maatheusgois">@maatheusgois</a>
+        </div>
+        <!-- MadeWithLove -->
+
+      </nav>
+    </div>
+    <!-- ./Rodape -->
+
+    <!-- ModalRifaGerada -->
+    <div id="container-modal" style="display: none;">
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open animated bounceIn">
+        <div class="slds-modal__container">
+
+          <!-- HeaderModal -->
+          <header class="slds-modal__header">
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+              Uhuuu, agora é só baixar ;)
+            </h2>
+          </header>
+          <!-- ./HeaderModal -->
+
+          <!-- BodyModal -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <a rel="noopener noreferrer" target="_blank" id="botao-baixar-rifa"
+              style="text-align: center; display: block;">
+              <img alt="Icone Download PDF" src="/assets/images/icons/pdf.svg" style="width:20%;">
+              <span style="display: block;"> Clique para baixar sua rifa! </span>
+            </a>
+          </div>
+          <!-- BodyModal -->
+
+          <!-- FooterModal -->
+          <footer class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" id="botao-fechar-modal">Fechar</button>
+          </footer>
+          <!-- ./FooterModal -->
+
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+    <!-- ./ModalRifaGerada -->
+
   </div>
-  <!-- ./ModalRifaGerada -->
 
   <!-- AppCode -->
   <script src="./index.ts"></script>
   <!-- ./AppCode -->
-
-</div>
 </body>
+
 </html>
