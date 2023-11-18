@@ -33,7 +33,8 @@ const TEXT_DEFAULT: Map<string, string> = new Map([
     ['var_premio_linha1', '>> Prêmio Linha 1 <<'],
     ['var_premio_linha2', '>> Prêmio Linha 2 <<'],
     ['var_data_realizacao', '>> Data Realização <<'],
-    ['var_local_realizacao', '>> Local Realização<<'],
+    ['var_local_realizacao', '>> Local Realização <<'],
+    ['var_valor_da_rifa', '>> Valor da Rifa <<'],
     ['var_observacoes', '>> Observações <<']
 ]);
 
@@ -74,6 +75,7 @@ const idVariaveisTemplate = [
     'var_premio_linha2',
     'var_data_realizacao',
     'var_local_realizacao',
+    'var_valor_da_rifa',
     'var_observacoes'
 ];
 
@@ -111,6 +113,7 @@ const idInputsTemplate = [
     'var_premio_linha2',
     'var_data_realizacao',
     'var_local_realizacao',
+    'var_valor_da_rifa',
     'var_observacoes'
 ];
 const entriesInputTemplate = idInputsTemplate
