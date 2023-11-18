@@ -16,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jefersonla/rifa-typescript-app.git"
+    "url": "https://github.com/maatheusgois/rifa-typescript-app.git"
   },
   "bugs": {
-    "url": "https://github.com/jefersonla/rifa-typescript-app/issues"
+    "url": "https://github.com/maatheusgois/rifa-typescript-app/issues"
   },
   "files": [
     "bin/",

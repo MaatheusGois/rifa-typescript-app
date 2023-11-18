@@ -57,7 +57,7 @@ Você pode ver o resultado desse projeto em  <https://jefersonla.github.io/rifa-
 
 Pull requests e stars são sempre bem vindas :)
 
-Para bugs e feature requests, [por favor crie uma issue](https://github.com/jefersonla/rifa-typescript-app/issues).
+Para bugs e feature requests, [por favor crie uma issue](https://github.com/maatheusgois/rifa-typescript-app/issues).
 
 Para contribuir siga os passos abaixo:
 
