@@ -37,12 +37,12 @@
     "svg-to-pdfkit": "0.1.7"
   },
   "devDependencies": {
-    "@types/lodash": "4.14.136",
-    "@types/pdfkit": "0.10.0",
     "@types/blob-stream": "0.1.29",
+    "@types/lodash": "4.14.136",
     "@types/node": "12.6.8",
+    "@types/pdfkit": "0.10.0",
     "cross-env": "5.2.0",
-    "gh-pages": "2.0.1",
+    "gh-pages": "^2.0.1",
     "parcel-bundler": "1.12.3",
     "typescript": "3.5.3"
   }
